@@ -1,0 +1,28 @@
+{
+  "version": "3.3.0.0",
+  "target": "classic ESP32",
+  "files": [
+    {
+      "path": "vendor/BSEC3_Arduino/src/inc/bsec_datatypes.h",
+      "bytes": 33717,
+      "sha256": "5726c925d4ba1ad103d433ee84de17301cf4a91206abdc97c941f1c09623d2e0"
+    },
+    {
+      "path": "vendor/BSEC3_Arduino/src/inc/bsec_interface.h",
+      "bytes": 23885,
+      "sha256": "6ec7b9e3de48db4390eef3745b1b1d5866e3a799238aa370ea61ac0eb0f4153e"
+    },
+    {
+      "path": "vendor/BSEC3_Arduino/src/esp32/libalgobsec.a",
+      "bytes": 261410,
+      "sha256": "0387a010f46ff13bf83870d506e0e4a79d22e6ca202589dfc02ea8174128fc04"
+    },
+    {
+      "path": "src/Models/DefaultIaqConfig.h",
+      "bytes": 1851,
+      "sha256": "c5e61be61eeeaac24645a1a370c529e649c976ef1277f27003ef199e6b810040",
+      "profile_bytes": 550,
+      "profile_sha256": "8b7bb2add00d78bc68f744d39b27813809e9f7aa26ffcc4ded34a557badcbc50"
+    }
+  ]
+}
