@@ -1,0 +1,17 @@
+* text=auto
+*.py text eol=lf
+*.cpp text eol=lf
+*.h text eol=lf
+*.ino text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.yml text eol=lf
+*.ps1 text eol=crlf
+*.cmd text eol=crlf
+*.png binary
+*.ico binary
+*.bmerawdata text eol=lf
+
+# Preserve upstream formatting and historical patches.
+firmware/esp32/MoldSense/vendor/** -whitespace
+*.patch -whitespace

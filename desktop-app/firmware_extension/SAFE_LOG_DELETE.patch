@@ -1,0 +1,30 @@
+--- SerialFileStore.h
++++ SerialFileStore.h
+@@
+   static bool userWritable(const String &path);
++  static bool userLogFile(const String &path);
+--- SerialFileStore.cpp
++++ SerialFileStore.cpp
+@@
+   } else if (command.startsWith("FILE_DELETE ")) {
+     String path = command.substring(12);
+     path.trim();
+     if (!userWritable(path)) Serial.println("FILE_ERROR: protected or invalid path.");
+     else Serial.println(LittleFS.remove(path) ? "FILE_DELETED" : "FILE_ERROR: delete failed.");
++  } else if (command.startsWith("LOG_DELETE ")) {
++    String path = command.substring(11);
++    path.trim();
++    if (!userLogFile(path)) Serial.println("FILE_ERROR: protected or invalid log path.");
++    else Serial.println(LittleFS.remove(path) ? "LOG_DELETED" : "FILE_ERROR: delete failed.");
+@@
+ bool SerialFileStore::userWritable(const String &path) {
+@@
+ }
++
++bool SerialFileStore::userLogFile(const String &path) {
++  if (!path.startsWith("/") || path.indexOf("..") >= 0 || path.indexOf("//") >= 0) return false;
++  return path == "/environment.csv" || path == "/sessions.csv" ||
++         path == "/bme688_iaq_log.csv" || path == "/bme688_full_log.csv" ||
++         (path.startsWith("/cap_") && path.endsWith(".bmerawdata"));
++}
+
