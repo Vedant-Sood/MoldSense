@@ -1,0 +1,1560 @@
+{
+  "imported_on": "2026-10-26",
+  "sources": [
+    {
+      "source": "MoldSense/.clang-format",
+      "destination": "firmware/esp32/MoldSense/.clang-format",
+      "sha256": "1386a702ac6ce682836bd6682652c11835a8c5514ed863b1ad62a4dcafdf3df4",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/.gitignore",
+      "destination": "firmware/esp32/MoldSense/.gitignore",
+      "sha256": "72ad349cc77b1b07eb5a011e7c8267e49cc05cf9c1db67a13251e62b2d1ae597",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/Config.h",
+      "destination": "firmware/esp32/MoldSense/Config.h",
+      "sha256": "7e77cfafc5e52ceab482b3c3489d8c00b771f898c6fea445545b7b67975eff43",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/MoldSense.ino",
+      "destination": "firmware/esp32/MoldSense/MoldSense.ino",
+      "sha256": "61499590e11912b01eda782ad839788cdd05a606ba943d45de157a02232c7716",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/platformio.ini",
+      "destination": "firmware/esp32/MoldSense/platformio.ini",
+      "sha256": "0f11246fd25036a9315ae23e4d40b0363f5f029201fe73eeb7f1530b73affcd9",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/README.md",
+      "destination": "firmware/esp32/MoldSense/README.md",
+      "sha256": "a93cd7d1019785fdb2c42d97bcbf9195da545ca06ede56694c025e217963ba81",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/THIRD_PARTY_NOTICES.md",
+      "destination": "firmware/esp32/MoldSense/THIRD_PARTY_NOTICES.md",
+      "sha256": "38fe8d8b6e99637fc6f4cf34da05385ba863a8b1c401ef49367f564fc080f0b1",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/docs/PROTOCOL.md",
+      "destination": "firmware/esp32/MoldSense/docs/PROTOCOL.md",
+      "sha256": "8dce2ed87c1451b6ecfa7d7335b82c0334094fa5d4965bdb501b38ac102a01bf",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/docs/SCIENCE.md",
+      "destination": "firmware/esp32/MoldSense/docs/SCIENCE.md",
+      "sha256": "5eb9fa9084884910484fd8c5381cd17914ea862a0af53fe46f3d2c3fed27e408",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/docs/VALIDATION.md",
+      "destination": "firmware/esp32/MoldSense/docs/VALIDATION.md",
+      "sha256": "361bf7c054eb4ed35c1faa186053755afcef5c79e9b0e0bace6955e96f695369",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/src/App.cpp",
+      "destination": "firmware/esp32/MoldSense/src/App.cpp",
+      "sha256": "391592cc891098144fe2409e0a0c9f29cef3f5724d449dc58fb430317c030f58",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/src/App.h",
+      "destination": "firmware/esp32/MoldSense/src/App.h",
+      "sha256": "1866cd23a2693fa8ba24ef71924d932fdda6e12ad46ed42c941e01161f9e641f",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/src/Analysis/MoldRiskEngine.cpp",
+      "destination": "firmware/esp32/MoldSense/src/Analysis/MoldRiskEngine.cpp",
+      "sha256": "c524858e1b9715419a2ab448a9b0806d3ec27373e619a7eb8e75481f342f0bbd",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/src/Analysis/MoldRiskEngine.h",
+      "destination": "firmware/esp32/MoldSense/src/Analysis/MoldRiskEngine.h",
+      "sha256": "2cf876109d964bfe9413ee85d206ff035c9b84b2755a4184371a98d567fec146",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/src/Analysis/MoldVOCClassifier.cpp",
+      "destination": "firmware/esp32/MoldSense/src/Analysis/MoldVOCClassifier.cpp",
+      "sha256": "05ff9e4a0d63e5589729d123d886558899331aaaf4d8269adf8cc8fde2eec742",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/src/Analysis/MoldVOCClassifier.h",
+      "destination": "firmware/esp32/MoldSense/src/Analysis/MoldVOCClassifier.h",
+      "sha256": "b972e0779ce816fe33dca83ed24bd16bbc127d7239a21ac4cbe0245e71214045",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/src/Calibration/BaselineManager.cpp",
+      "destination": "firmware/esp32/MoldSense/src/Calibration/BaselineManager.cpp",
+      "sha256": "639d168dca57e902bb8807d870d98505143bccf48c3da5bcc3cdbf0a8d51f072",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/src/Calibration/BaselineManager.h",
+      "destination": "firmware/esp32/MoldSense/src/Calibration/BaselineManager.h",
+      "sha256": "bf054a9dab31cbdc789d970c41ed47eb7f50aa2436d09ed48d904664ae6506a8",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/src/Core/Math.h",
+      "destination": "firmware/esp32/MoldSense/src/Core/Math.h",
+      "sha256": "fe59482fb0790e94de068dcfe50603b399fae62401b65a1140763d76811c73cf",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/src/Core/Switches.h",
+      "destination": "firmware/esp32/MoldSense/src/Core/Switches.h",
+      "sha256": "4feff7cbad5733d231db2663b274bfe5669a66910d110e8de827e96dd2a37709",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/src/Core/Types.h",
+      "destination": "firmware/esp32/MoldSense/src/Core/Types.h",
+      "sha256": "a6d126d9aab21e80a135e576e12342156ee460c38f1489dc0d1c020993f7d87a",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/src/Models/DefaultIaqConfig.h",
+      "destination": "firmware/esp32/MoldSense/src/Models/DefaultIaqConfig.h",
+      "sha256": "c5e61be61eeeaac24645a1a370c529e649c976ef1277f27003ef199e6b810040",
+      "publication": "local-only"
+    },
+    {
+      "source": "MoldSense/src/Models/MoldModelConfig.h",
+      "destination": "firmware/esp32/MoldSense/src/Models/MoldModelConfig.h",
+      "sha256": "160b18df600762cbb7f334954816dcb730950acbd7dee8f92d1eb722a7efa231",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/src/Sensors/BMEManager.cpp",
+      "destination": "firmware/esp32/MoldSense/src/Sensors/BMEManager.cpp",
+      "sha256": "535ed66bc7e89ba3930f116e49cc3bf706de33c128571c71d56af6de9e25adf2",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/src/Sensors/BMEManager.h",
+      "destination": "firmware/esp32/MoldSense/src/Sensors/BMEManager.h",
+      "sha256": "8ba00cbe602f18dd436c45cecd17dcaa903621391f58a5e5c64113d43ff5c63f",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/src/Sensors/WallMoisture.cpp",
+      "destination": "firmware/esp32/MoldSense/src/Sensors/WallMoisture.cpp",
+      "sha256": "6323defc1c3362269777a764e5a34f6262373773ee21c71f3a5e781862923bdf",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/src/Sensors/WallMoisture.h",
+      "destination": "firmware/esp32/MoldSense/src/Sensors/WallMoisture.h",
+      "sha256": "334c812bdf07eced71a55bc00543b4248160be4cf10bffb7f0100b8b9b02fdef",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/src/Storage/Record.h",
+      "destination": "firmware/esp32/MoldSense/src/Storage/Record.h",
+      "sha256": "e7856af59c5fbc2757324747960dca9daabd3cffb9dcf6bbe52b0cf985f0e486",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/src/Storage/StorageManager.cpp",
+      "destination": "firmware/esp32/MoldSense/src/Storage/StorageManager.cpp",
+      "sha256": "56ade07084b724fd730bc38769caf7a106483d47b04f7f8ac3c37c34d457c541",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/src/Storage/StorageManager.h",
+      "destination": "firmware/esp32/MoldSense/src/Storage/StorageManager.h",
+      "sha256": "0ba787feb20f62d94b9f305537cd7e917a56540ea75e61c92bd3e3fac7545f5a",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/src/UI/Console.cpp",
+      "destination": "firmware/esp32/MoldSense/src/UI/Console.cpp",
+      "sha256": "6a249c9635bbe3143ba1a2263ad9866e1ea606f8eaf7d76a44cf85b49dba493d",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/src/UI/Console.h",
+      "destination": "firmware/esp32/MoldSense/src/UI/Console.h",
+      "sha256": "0d79b826aa742399f6da176f909c44893d61c8ecb8fde02c627079c899510554",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/src/UI/OLEDUI.cpp",
+      "destination": "firmware/esp32/MoldSense/src/UI/OLEDUI.cpp",
+      "sha256": "4fb36e999dfc9e1f20589c87379f2ec9c85c1d519b39e9e1e63d0f4d51da55e2",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/src/UI/OLEDUI.h",
+      "destination": "firmware/esp32/MoldSense/src/UI/OLEDUI.h",
+      "sha256": "34a98e73b73c4f161e4cb9f91b2eccf1bd293d6ab200841c2de890818dcce198",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/src/UI/ResearchProtocol.cpp",
+      "destination": "firmware/esp32/MoldSense/src/UI/ResearchProtocol.cpp",
+      "sha256": "6721796f61703500dbda309ea41e76980597d72d8e1d8706163440a7b3510960",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/src/UI/ResearchProtocol.h",
+      "destination": "firmware/esp32/MoldSense/src/UI/ResearchProtocol.h",
+      "sha256": "794cbc11f9ef8ad7a783d11d915bc1f27b9b54b8a30b4307db3cb2bbabf0cc13",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/tests/test_core.cpp",
+      "destination": "firmware/esp32/MoldSense/tests/test_core.cpp",
+      "sha256": "551d48e0b2a338b59907c892121e50348735704cdc71d3b50bbcdae634182457",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/tests/mocks/Adafruit_GFX.h",
+      "destination": "firmware/esp32/MoldSense/tests/mocks/Adafruit_GFX.h",
+      "sha256": "dbccf59920e9e6e0ef0940be2fc4dc86c757e5ca81471e4825a28171fa918714",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/tests/mocks/Adafruit_SSD1306.h",
+      "destination": "firmware/esp32/MoldSense/tests/mocks/Adafruit_SSD1306.h",
+      "sha256": "51811d2a40ff5c79e97d748b13a901d816b6d0b341b9ad394d3b0f08006a422e",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/tests/mocks/Arduino.h",
+      "destination": "firmware/esp32/MoldSense/tests/mocks/Arduino.h",
+      "sha256": "893a88692b86b08956483d8d27321364137bbc5504e467943f455fc32e2ec3f0",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/tests/mocks/LittleFS.h",
+      "destination": "firmware/esp32/MoldSense/tests/mocks/LittleFS.h",
+      "sha256": "431d88e18f55a5fff18f3fb949d3b8ba76083bb124d46f0b79c421df87bc1bc3",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/tests/mocks/Preferences.h",
+      "destination": "firmware/esp32/MoldSense/tests/mocks/Preferences.h",
+      "sha256": "c61d4ec8257c1b223cc96a7bae4bfb66381730acfb62d924b0ac68504223222e",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/tools/build.ps1",
+      "destination": "firmware/esp32/MoldSense/tools/build.ps1",
+      "sha256": "926577c92a9bab8f8f66a6e834ee2815f477e8692eca255348ca8e17e7c79635",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/tools/import_model.py",
+      "destination": "firmware/esp32/MoldSense/tools/import_model.py",
+      "sha256": "3671266cbbb5fba535342c190ec4cab509391b48b0f4f7a7daa54037852a237c",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/tools/package_release.py",
+      "destination": "firmware/esp32/MoldSense/tools/package_release.py",
+      "sha256": "4c2490bce04a7f672feadf0bb2111e121869a9fda48ec9cb7a4678d240d046cf",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/tools/run_tests.py",
+      "destination": "firmware/esp32/MoldSense/tools/run_tests.py",
+      "sha256": "4c393abf45122c5faba638b632d30d70a30eada3370b4aca459176cd03e2d9a3",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_BusIO/Adafruit_BusIO_Register.cpp",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_BusIO/Adafruit_BusIO_Register.cpp",
+      "sha256": "9a0af578ea07956296834f4505e5b134ad7e1cc22ac9c9d84a640a07a94f870b",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_BusIO/Adafruit_BusIO_Register.h",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_BusIO/Adafruit_BusIO_Register.h",
+      "sha256": "91560f9fc1b8cda42ab039ccdfe0abf92bf09c425a6142ff54af099809b9d47a",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_BusIO/Adafruit_GenericDevice.cpp",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_BusIO/Adafruit_GenericDevice.cpp",
+      "sha256": "c26d9c1207c3626fb95884f01cc1f8179fcd7c2c6b0583fff25187c4f2c814d2",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_BusIO/Adafruit_GenericDevice.h",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_BusIO/Adafruit_GenericDevice.h",
+      "sha256": "b12c364e359a0aba6aabc440bc64e375b825214a2835fa1bf38ac709f9e25546",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_BusIO/Adafruit_I2CDevice.cpp",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_BusIO/Adafruit_I2CDevice.cpp",
+      "sha256": "317c342821f1df676a0e034f65685b4d6bf240d2ab8dcea91d18f1e063326d37",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_BusIO/Adafruit_I2CDevice.h",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_BusIO/Adafruit_I2CDevice.h",
+      "sha256": "88b843d7a44e3f974950d883649e5682f21d9f8ce135daff3a42d015f7cd27e7",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_BusIO/Adafruit_I2CRegister.h",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_BusIO/Adafruit_I2CRegister.h",
+      "sha256": "8318d1f65d5468742c0aa48bd50a7e3bd4ddf02e3eba11bc01ad50cf9c20bc67",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_BusIO/Adafruit_SPIDevice.cpp",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_BusIO/Adafruit_SPIDevice.cpp",
+      "sha256": "f846ee438eee41bef174c6dbe1f689f7ccbbd732ca4261c7b9e9337b1e5d08b5",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_BusIO/Adafruit_SPIDevice.h",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_BusIO/Adafruit_SPIDevice.h",
+      "sha256": "58ff1433718cef7317638403160d5dd918d92c0f7b4204fb08ad401751d74508",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_BusIO/CMakeLists.txt",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_BusIO/CMakeLists.txt",
+      "sha256": "388cb8134d21bca989fa8efc48f6e8f7960805a14bfef75ae0d23ee8dcef97cd",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_BusIO/component.mk",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_BusIO/component.mk",
+      "sha256": "65a8bc94954334982bc226826da72647027c1bcc85447804e1fbab7f23228ab7",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_BusIO/library.properties",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_BusIO/library.properties",
+      "sha256": "1f1c13c18d84a15f71e8e833aeaf1ada2d505cc915485174167ea661ed085194",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_BusIO/LICENSE",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_BusIO/LICENSE",
+      "sha256": "86e9fafdb50d2a85d8fef369b4635b5a1b89160603e5b1f95484df0804b49508",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_BusIO/README.md",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_BusIO/README.md",
+      "sha256": "7857d55466e3f419a4f99829968fb94ef270b816152592eb6c561e880daa6e3e",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_GFX_Library/Adafruit_GFX.cpp",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_GFX_Library/Adafruit_GFX.cpp",
+      "sha256": "5afa8ca16241a9a0cb354012dd00780c6c00620c345b810a9504cb77bfc698d5",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_GFX_Library/Adafruit_GFX.h",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_GFX_Library/Adafruit_GFX.h",
+      "sha256": "e4ace04cbed4499c0e2a80df33b381c87ce98689d98da82712f0748bf7359171",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_GFX_Library/Adafruit_GrayOLED.cpp",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_GFX_Library/Adafruit_GrayOLED.cpp",
+      "sha256": "03ea5c79bf86d8c7a7118dee264341fac0ecc0c5ecdc57eee47dea1981f9edd6",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_GFX_Library/Adafruit_GrayOLED.h",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_GFX_Library/Adafruit_GrayOLED.h",
+      "sha256": "27c451c21b6d16bef0fb6b94527dfe1d738a9445de4b351f75f24cc360c4e0ad",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_GFX_Library/Adafruit_SPITFT.cpp",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_GFX_Library/Adafruit_SPITFT.cpp",
+      "sha256": "b5982e2ebb558b29a9c76a9bb694193208b46fdafa7d8ea105eb168b0fe9dcb5",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_GFX_Library/Adafruit_SPITFT.h",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_GFX_Library/Adafruit_SPITFT.h",
+      "sha256": "23901ed7ab3953816d13471c4016763b25983fa0400448589f06376d53be1b10",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_GFX_Library/Adafruit_SPITFT_Macros.h",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_GFX_Library/Adafruit_SPITFT_Macros.h",
+      "sha256": "c6f1e4e0cc97b98e85bb0c863954d41f72d3bd31874b03a57faa9ae4f8984f6d",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_GFX_Library/CMakeLists.txt",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_GFX_Library/CMakeLists.txt",
+      "sha256": "719d4bf7cc03c5e1c3227d6786980ac2e2491f8dd98baa055bf3e55820f80e35",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_GFX_Library/component.mk",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_GFX_Library/component.mk",
+      "sha256": "65a8bc94954334982bc226826da72647027c1bcc85447804e1fbab7f23228ab7",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_GFX_Library/gfxfont.h",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_GFX_Library/gfxfont.h",
+      "sha256": "4e1b06371217d63102bac242d4a3ec8dcaff93cd34b4241bbc39eda521a1be11",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_GFX_Library/glcdfont.c",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_GFX_Library/glcdfont.c",
+      "sha256": "bd6d60ecb9cc350a83f209d7c62de2fe5f6ce3402d5598cde2988b5b44e83e02",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_GFX_Library/library.properties",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_GFX_Library/library.properties",
+      "sha256": "e6b702f2d0463216bf4b89d10c1701ae0de2aabbee42f7088054e9e21949cc31",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_GFX_Library/license.txt",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_GFX_Library/license.txt",
+      "sha256": "3e7bede50526352926c2283e640f2823d9f9f2165d1852044c4fb1bbac283106",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_GFX_Library/README.md",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_GFX_Library/README.md",
+      "sha256": "6890f42a55c06828629738cb9b015f813a108a85d30013a3b1a77c4a7d0140a1",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_GFX_Library/fontconvert/bdf2adafruit.py",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_GFX_Library/fontconvert/bdf2adafruit.py",
+      "sha256": "eb03983ee15e821888ad4c8f321ffaba8b9346f3d09f6624ab4597d200dcc9ce",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_GFX_Library/fontconvert/fontconvert.c",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_GFX_Library/fontconvert/fontconvert.c",
+      "sha256": "42e70906d68e4a7bced1c47a7bb12d2a86c29484eeb564f76449ea7a9b6c3ba1",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_GFX_Library/fontconvert/fontconvert_win.md",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_GFX_Library/fontconvert/fontconvert_win.md",
+      "sha256": "76bf8de4bfb5f86fff8d2f80b0f32bcbf401642430b00a6c121112d270e598f1",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_GFX_Library/fontconvert/Makefile",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_GFX_Library/fontconvert/Makefile",
+      "sha256": "a39d6a4413c7d8d5c394cd9e52c8ad8553a8afc71be3fd426e496a77ec88c17a",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_GFX_Library/fontconvert/makefonts.sh",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_GFX_Library/fontconvert/makefonts.sh",
+      "sha256": "ccc786b8fb5077bd6d1948778620469cbbfa83f3f3b17cef1436cd22c71cf662",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeMono12pt7b.h",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeMono12pt7b.h",
+      "sha256": "21f369cca12e929a6cc26c740b64d2e9bb40ebf8f20c5b878f064d4ebb3d36de",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeMono18pt7b.h",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeMono18pt7b.h",
+      "sha256": "f09df516cb487de3d2e0f36d9c45ffe4ea4bfc938735d10b47ff641842618688",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeMono24pt7b.h",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeMono24pt7b.h",
+      "sha256": "c9a03fb1fad357e68f7487da819b083711d7c3d11201635da5ed12a6a83821a2",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeMono9pt7b.h",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeMono9pt7b.h",
+      "sha256": "6bef1a38a049113ee9f4c7874ba3a164631e74d608df117491bcfb60fec56ec3",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeMonoBold12pt7b.h",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeMonoBold12pt7b.h",
+      "sha256": "0739083a428d8120ac0818e0585717f46b2183f08530f9b83813f1447febc611",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeMonoBold18pt7b.h",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeMonoBold18pt7b.h",
+      "sha256": "0c89a48671074e834b9c00d2347cb4e433799b8bfcde9eade8979a07d5bedda4",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeMonoBold24pt7b.h",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeMonoBold24pt7b.h",
+      "sha256": "660733c0f5bdf2afc72472af94404bc59dc2eebe7e9787f064ba7756a594ce38",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeMonoBold9pt7b.h",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeMonoBold9pt7b.h",
+      "sha256": "8cfea064cff367cf3e6a89cd2400ffdb731271f88a5016fb619dcd79b7dad733",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeMonoBoldOblique12pt7b.h",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeMonoBoldOblique12pt7b.h",
+      "sha256": "e7d8dc059aca726294f1dbc6eb4826e13261059434d426bc717cba629cd4b61a",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeMonoBoldOblique18pt7b.h",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeMonoBoldOblique18pt7b.h",
+      "sha256": "97083aec2726a168deafb4766377187dceb8fe6e52382b242730c3ec34cc8f8f",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeMonoBoldOblique24pt7b.h",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeMonoBoldOblique24pt7b.h",
+      "sha256": "b30c44c9aa6edc573c1b587ac0dc56388c62d05114cb76510a0f78e4ded86d18",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeMonoBoldOblique9pt7b.h",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeMonoBoldOblique9pt7b.h",
+      "sha256": "77e4c898599042277d04d3004feffd39b18c89d1a93f5cba65ff7506e25dd6ea",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeMonoOblique12pt7b.h",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeMonoOblique12pt7b.h",
+      "sha256": "cd07c68d1dd9ecb2654a66fbb1aeb0117f779844cc079f99678cf9c3dabf04fe",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeMonoOblique18pt7b.h",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeMonoOblique18pt7b.h",
+      "sha256": "d80a751b9b2a60178699602ee042006b944263175494d53d1a404d2968a1a508",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeMonoOblique24pt7b.h",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeMonoOblique24pt7b.h",
+      "sha256": "f7f878d3b47231b43c9dd07d57100dd0364abfdb8953a25fd85b107da7ab0d1f",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeMonoOblique9pt7b.h",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeMonoOblique9pt7b.h",
+      "sha256": "8bbee06061722f180fe53e8813857dfd00cf404630c60283c4407f6f7700ac89",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeSans12pt7b.h",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeSans12pt7b.h",
+      "sha256": "0e15e376ec314ac1399613e2466288d795501a467d4e7860e852976997cd7850",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeSans18pt7b.h",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeSans18pt7b.h",
+      "sha256": "b6cc5607b838fcb422ef5c5925439b54061ab63eda1e00767d0c0bf3ee0b429f",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeSans24pt7b.h",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeSans24pt7b.h",
+      "sha256": "e3cde750f607f1db3bd6c6d2d92e5cfd36a9a20d49df90d6a13b6eee7a490747",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeSans9pt7b.h",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeSans9pt7b.h",
+      "sha256": "feacaaf7df57be67d483ed35a7aeb59402ad8c9736e456e3f044e62eaf3a9314",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeSansBold12pt7b.h",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeSansBold12pt7b.h",
+      "sha256": "50b008dd06cf02fc3e46d872781f3bebb2009f09f80ca791e67138ef51d58630",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeSansBold18pt7b.h",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeSansBold18pt7b.h",
+      "sha256": "4b3a67ee0d2fd5bce431a256cc77c0acd53f8cce4e0d0619a7a2695a7fbee970",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeSansBold24pt7b.h",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeSansBold24pt7b.h",
+      "sha256": "ce00fb926f7d718b253dde1cbdd2f18c509c748ecec608c0ddc639ce188e9a54",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeSansBold9pt7b.h",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeSansBold9pt7b.h",
+      "sha256": "a833751a8153c442afaadc16de2699e9a0163264c1df2ef30f3b5bbdba2b93ed",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeSansBoldOblique12pt7b.h",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeSansBoldOblique12pt7b.h",
+      "sha256": "6cf7dc07ecc478acb2822e067b05be5834331f0751bd2aba030a3d38e001a6de",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeSansBoldOblique18pt7b.h",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeSansBoldOblique18pt7b.h",
+      "sha256": "b6cd1ab0683ca218a93b22c499e750300c1d4c101ac4566db84a6fa28d236f30",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeSansBoldOblique24pt7b.h",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeSansBoldOblique24pt7b.h",
+      "sha256": "4fed61aa9cd99eb0a492f10e8aa01287db136e24235fb195f75412ae2e1db0ab",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeSansBoldOblique9pt7b.h",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeSansBoldOblique9pt7b.h",
+      "sha256": "399a69c387df1a8cd84987f9d2b9a015443e18bf1d819b74b5bf66af6aed3ebc",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeSansOblique12pt7b.h",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeSansOblique12pt7b.h",
+      "sha256": "c3ae703940f3f08bf4ccbcbb24cae7771720ab8b9b8ca74d390edd99a9659688",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeSansOblique18pt7b.h",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeSansOblique18pt7b.h",
+      "sha256": "9d03873e93cc61fcbed21128c22c37e2d93a470165280a0822dbbf331eefa122",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeSansOblique24pt7b.h",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeSansOblique24pt7b.h",
+      "sha256": "d41e526b2d677bc32edcc5e5b674a07be7a08048375ad69d3651717de3cb7753",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeSansOblique9pt7b.h",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeSansOblique9pt7b.h",
+      "sha256": "1ddc19a4b495408ba0d0c7efb48904d9c3459c62ab722aa54b99d283fa5cd0d4",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeSerif12pt7b.h",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeSerif12pt7b.h",
+      "sha256": "d9e664a614eeda7ea7942b0fd85e2715d28747a712f346377c47efcbab99aed9",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeSerif18pt7b.h",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeSerif18pt7b.h",
+      "sha256": "498cd6591b04cc27c0306979016a059ed284f44338375143e99a0c6fa1000171",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeSerif24pt7b.h",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeSerif24pt7b.h",
+      "sha256": "c6cbb427f51e1ffe1f4cfe89e1f2c2317edbe0a5a8c3b517eb02719721e27c57",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeSerif9pt7b.h",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeSerif9pt7b.h",
+      "sha256": "330670dc6c05b39915dc47bd5b1e272a44f2bf18108eca799649d2ac7368839a",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeSerifBold12pt7b.h",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeSerifBold12pt7b.h",
+      "sha256": "e1aa2959eb408b289cff144996efd7bf2d6b08e5eebde8dbb80792aaee8dbfeb",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeSerifBold18pt7b.h",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeSerifBold18pt7b.h",
+      "sha256": "4fbfb1faa143e09b570e95c434c0821a07994529bec579fd22bfd9f9baad3780",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeSerifBold24pt7b.h",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeSerifBold24pt7b.h",
+      "sha256": "e66cb62a26127b5776848167c9cb406ebc51c480123eb313e6fc9f2e38c62460",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeSerifBold9pt7b.h",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeSerifBold9pt7b.h",
+      "sha256": "61ebd809fca54d93b4195289be5f4e837cfe41f7998cff66b5fa2c09c5916b3f",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeSerifBoldItalic12pt7b.h",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeSerifBoldItalic12pt7b.h",
+      "sha256": "c4587d3d064b6ee43cdc27c4fbe1828cf0bf531dc19ff692d177f71b358d2277",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeSerifBoldItalic18pt7b.h",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeSerifBoldItalic18pt7b.h",
+      "sha256": "ec0ca5a439493bded92a41534644c9db51298bcda976362880ae6ee933aea0a5",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeSerifBoldItalic24pt7b.h",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeSerifBoldItalic24pt7b.h",
+      "sha256": "98cc662d98016e0e69125f4e0da5bce9a364490eccb008c73bf9ed313df9831a",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeSerifBoldItalic9pt7b.h",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeSerifBoldItalic9pt7b.h",
+      "sha256": "96aec072db8f36a223d055521f1f04f6c9a1aa64395a974464d00e80e5ed67ea",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeSerifItalic12pt7b.h",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeSerifItalic12pt7b.h",
+      "sha256": "587bc04736886112a06d1bc4fbafc242c4a24de032acb42d9fda43596e2dcbcd",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeSerifItalic18pt7b.h",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeSerifItalic18pt7b.h",
+      "sha256": "86cdd8f59ca0b47508a6e858f84e796adf735c0a8355e2f52784ad526033cdff",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeSerifItalic24pt7b.h",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeSerifItalic24pt7b.h",
+      "sha256": "3af05ccf96780dc26b9154b7871528e3c8c7e09f82b6b00e17d9dfb5020478f8",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeSerifItalic9pt7b.h",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_GFX_Library/Fonts/FreeSerifItalic9pt7b.h",
+      "sha256": "ee4f79365a5ec0dcac844c497cbb484cc6d46d6c2391b3ebad58eec8e4ea0620",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_GFX_Library/Fonts/Org_01.h",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_GFX_Library/Fonts/Org_01.h",
+      "sha256": "6366cd58da1ab53f7b27d68f85463d3db207c88b7a01f97132f8c6a8c3be4451",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_GFX_Library/Fonts/Picopixel.h",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_GFX_Library/Fonts/Picopixel.h",
+      "sha256": "035c01e6d48efdfef1e4de6152d0d03910210e449236506ec7c8f71799073363",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_GFX_Library/Fonts/Tiny3x3a2pt7b.h",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_GFX_Library/Fonts/Tiny3x3a2pt7b.h",
+      "sha256": "96fe2267efcd0f9086c735ad594fe9798b868b9198720af9bf18cc929d96f474",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_GFX_Library/Fonts/TomThumb.h",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_GFX_Library/Fonts/TomThumb.h",
+      "sha256": "a2b89525189e738feb2eba5288f9f6c7ece0b171d603468c4c585372a3342723",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_SSD1306/Adafruit_SSD1306.cpp",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_SSD1306/Adafruit_SSD1306.cpp",
+      "sha256": "ddbd788bfaf97dd3b5ba5ee67eb62ab51652cbe86e34c2e7d24d5e074bb34bdd",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_SSD1306/Adafruit_SSD1306.h",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_SSD1306/Adafruit_SSD1306.h",
+      "sha256": "89c5e18cc19a41bd47130e1a4dc344733ad2bb6b6ef6c4c43eeddaf9854db6a2",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_SSD1306/CMakeLists.txt",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_SSD1306/CMakeLists.txt",
+      "sha256": "470e043da72e14b051ab7f5ba5d33aa28f18ec387d8707f85867a5aaa80d4405",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_SSD1306/component.mk",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_SSD1306/component.mk",
+      "sha256": "65a8bc94954334982bc226826da72647027c1bcc85447804e1fbab7f23228ab7",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_SSD1306/library.properties",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_SSD1306/library.properties",
+      "sha256": "bfb5d85959c14de682a285496e3c905054a0b126b0ca2d7c1870307890e6bc9d",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_SSD1306/license.txt",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_SSD1306/license.txt",
+      "sha256": "4b6bb6d827e9da638841bf575c6068b83aaaf0d9508e892d3ea27e2525b070e8",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_SSD1306/README.md",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_SSD1306/README.md",
+      "sha256": "b098cb53f4810301ab31d26d3cc0c24310c960c66d7c40453a91be81dc2e5103",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_SSD1306/splash.h",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_SSD1306/splash.h",
+      "sha256": "01d79e7b12ba9e2f29f967803bb85b037ad8981b2b2f7d3997db51811d47177d",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_SSD1306/scripts/Makefile",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_SSD1306/scripts/Makefile",
+      "sha256": "d37ea677edb9ca9e7e3b1f30a1a05f897465068578da25d49dca58e5f404e2d9",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_SSD1306/scripts/make_splash.py",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_SSD1306/scripts/make_splash.py",
+      "sha256": "1208aa2074ee98429cf1aaecc33e473dc3e16c105fd179a91bea9fdcd2d5a735",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_SSD1306/scripts/splash1.png",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_SSD1306/scripts/splash1.png",
+      "sha256": "6e5f25c215470eb73ef7d3e5f37c4175f028ea4fe1b04c58aabfa9ac445fd29f",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/Adafruit_SSD1306/scripts/splash2.png",
+      "destination": "firmware/esp32/MoldSense/vendor/Adafruit_SSD1306/scripts/splash2.png",
+      "sha256": "f7d0ba6519b9913f4ed71a8975ce9f0816020ee775373f0c145073f1c32f5169",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/BME68x_Sensor_library/keywords.txt",
+      "destination": "firmware/esp32/MoldSense/vendor/BME68x_Sensor_library/keywords.txt",
+      "sha256": "4977361519429a6bc66ddec0b18ebe982fd6808e281d6a47f415e9a5ebf4ab99",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/BME68x_Sensor_library/library.json",
+      "destination": "firmware/esp32/MoldSense/vendor/BME68x_Sensor_library/library.json",
+      "sha256": "75be26b68e20260f8b8d00ff5a9a400516651daf5a5719544d24b7ca15ed9aab",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/BME68x_Sensor_library/library.properties",
+      "destination": "firmware/esp32/MoldSense/vendor/BME68x_Sensor_library/library.properties",
+      "sha256": "c1e2d4700f6a9ececca10aa9f11d13cbc14baa8c8f6f208459d35811701e6143",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/BME68x_Sensor_library/LICENSE",
+      "destination": "firmware/esp32/MoldSense/vendor/BME68x_Sensor_library/LICENSE",
+      "sha256": "f9eef11fa039df04a95f44533136bfa594c9db1db339cad29c9d4629af37c000",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/BME68x_Sensor_library/README.md",
+      "destination": "firmware/esp32/MoldSense/vendor/BME68x_Sensor_library/README.md",
+      "sha256": "699087dad42bc9f6d045a54a21b4ed7498b4e284e15136d852e11aa387c32fcc",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/BME68x_Sensor_library/src/bme68xLibrary.cpp",
+      "destination": "firmware/esp32/MoldSense/vendor/BME68x_Sensor_library/src/bme68xLibrary.cpp",
+      "sha256": "da75a1e965be20b9eaa56902df95a0e1e7079f9d658d665bd872eac2c4e025c6",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/BME68x_Sensor_library/src/bme68xLibrary.h",
+      "destination": "firmware/esp32/MoldSense/vendor/BME68x_Sensor_library/src/bme68xLibrary.h",
+      "sha256": "d1b10211937b09ab5d4ede441a3f93c9e39ec056a15e4f994c68d5658612b6ba",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/BME68x_Sensor_library/src/bme68x/bme68x.c",
+      "destination": "firmware/esp32/MoldSense/vendor/BME68x_Sensor_library/src/bme68x/bme68x.c",
+      "sha256": "bad525ea57fe57a5d7dda19d287781bcbab50fdbf2dedea737c16b206cbe0157",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/BME68x_Sensor_library/src/bme68x/bme68x.h",
+      "destination": "firmware/esp32/MoldSense/vendor/BME68x_Sensor_library/src/bme68x/bme68x.h",
+      "sha256": "09ed6babf92955ced360790958e2e2f03efb85bc4f0a8a864a4151a905eaf0ca",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/BME68x_Sensor_library/src/bme68x/bme68x_defs.h",
+      "destination": "firmware/esp32/MoldSense/vendor/BME68x_Sensor_library/src/bme68x/bme68x_defs.h",
+      "sha256": "5f59c0bafbcc416c091a1a1cc40bb7362f0b48ea02ac7fa5197813f491de01aa",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/BME68x_Sensor_library/src/bme68x/LICENSE",
+      "destination": "firmware/esp32/MoldSense/vendor/BME68x_Sensor_library/src/bme68x/LICENSE",
+      "sha256": "56df116398e0b72a12ae353d93002d29175583590283ced2c2510e3d8075546f",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/BME68x_Sensor_library/src/bme68x/README.md",
+      "destination": "firmware/esp32/MoldSense/vendor/BME68x_Sensor_library/src/bme68x/README.md",
+      "sha256": "bfe3b54bf2ca270ff0f92124f42d2ca0a2a2f357d51874c9c828c00b80f15b65",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/BSEC3_Arduino/library.properties",
+      "destination": "firmware/esp32/MoldSense/vendor/BSEC3_Arduino/library.properties",
+      "sha256": "eee0b2972147b0bc6ec78eb74caa0fcab994cf98a1a3022406625421a4ade872",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/BSEC3_Arduino/README.md",
+      "destination": "firmware/esp32/MoldSense/vendor/BSEC3_Arduino/README.md",
+      "sha256": "4a1f10257a70a2ea3ca69ce06020ea5ea29dc3d2200f2207f93032c1584ee8b8",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/BSEC3_Arduino/src/bsec3.cpp",
+      "destination": "firmware/esp32/MoldSense/vendor/BSEC3_Arduino/src/bsec3.cpp",
+      "sha256": "42fb5f3680c69b834359270099b54a9ce9c9278df06e74dbd395a8770fcffc3b",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/BSEC3_Arduino/src/bsec3.h",
+      "destination": "firmware/esp32/MoldSense/vendor/BSEC3_Arduino/src/bsec3.h",
+      "sha256": "0ab822e22ec3d110bbf3dbc520796911ee2f464ab7e31a1709d303f2a28bb1cd",
+      "publication": "included"
+    },
+    {
+      "source": "MoldSense/vendor/BSEC3_Arduino/src/esp32/libalgobsec.a",
+      "destination": "firmware/esp32/MoldSense/vendor/BSEC3_Arduino/src/esp32/libalgobsec.a",
+      "sha256": "0387a010f46ff13bf83870d506e0e4a79d22e6ca202589dfc02ea8174128fc04",
+      "publication": "local-only"
+    },
+    {
+      "source": "MoldSense/vendor/BSEC3_Arduino/src/inc/bsec_datatypes.h",
+      "destination": "firmware/esp32/MoldSense/vendor/BSEC3_Arduino/src/inc/bsec_datatypes.h",
+      "sha256": "5726c925d4ba1ad103d433ee84de17301cf4a91206abdc97c941f1c09623d2e0",
+      "publication": "local-only"
+    },
+    {
+      "source": "MoldSense/vendor/BSEC3_Arduino/src/inc/bsec_interface.h",
+      "destination": "firmware/esp32/MoldSense/vendor/BSEC3_Arduino/src/inc/bsec_interface.h",
+      "sha256": "6ec7b9e3de48db4390eef3745b1b1d5866e3a799238aa370ea61ac0eb0f4153e",
+      "publication": "local-only"
+    },
+    {
+      "source": "moldsenseusercodev1/ARCHITECTURE_ASSESSMENT.md",
+      "destination": "desktop-app/ARCHITECTURE_ASSESSMENT.md",
+      "sha256": "d928aaf7f567705b6a2b3a3f4b3c39fe3960f6da556f2c056b1a3cdef81c5f50",
+      "publication": "included"
+    },
+    {
+      "source": "moldsenseusercodev1/build_research.ps1",
+      "destination": "desktop-app/build_research.ps1",
+      "sha256": "c95fdd709a84fe19a673dea26e3b897a692e4fbe6ac8c616c96284fc2060e2ca",
+      "publication": "included"
+    },
+    {
+      "source": "moldsenseusercodev1/build_windows.ps1",
+      "destination": "desktop-app/build_windows.ps1",
+      "sha256": "f4f5c6dcb7a4a5690d41e71f4732b9f8c4baa61c665c6dcf135d46f9b81cfc88",
+      "publication": "included"
+    },
+    {
+      "source": "moldsenseusercodev1/install_windows.ps1",
+      "destination": "desktop-app/install_windows.ps1",
+      "sha256": "3dc59aa9be0e1754aafc5400aa22f24f699642ea25dd045105a8e8be79c734bb",
+      "publication": "included"
+    },
+    {
+      "source": "moldsenseusercodev1/MoldSense Dashboard.vbs",
+      "destination": "desktop-app/MoldSense Dashboard.vbs",
+      "sha256": "0c7118befcf9483cb3652d7b18fe6f1d03460b4397315be71776a0445a24ae44",
+      "publication": "included"
+    },
+    {
+      "source": "moldsenseusercodev1/README.md",
+      "destination": "desktop-app/README.md",
+      "sha256": "8c9276bcf62d7ec2deff84e3b2fdcd4dc5af0bda7a48e769fd600ec619486501",
+      "publication": "included"
+    },
+    {
+      "source": "moldsenseusercodev1/requirements-build.txt",
+      "destination": "desktop-app/requirements-build.txt",
+      "sha256": "ea5a3e6953676d3acc7a9b275c3df4e9206ee862397c56040c6a28f03e150982",
+      "publication": "included"
+    },
+    {
+      "source": "moldsenseusercodev1/requirements-validated.txt",
+      "destination": "desktop-app/requirements-validated.txt",
+      "sha256": "e7e609997d4687d9a2c1c809b7c8a9d80d40d702d495a0b3ec019e4996eac574",
+      "publication": "included"
+    },
+    {
+      "source": "moldsenseusercodev1/requirements.txt",
+      "destination": "desktop-app/requirements.txt",
+      "sha256": "cc269c59bef27a874a3029622c6f2c3c69e5fe79d2fc4b514046fcd031ca1275",
+      "publication": "included"
+    },
+    {
+      "source": "moldsenseusercodev1/RESEARCH_README.md",
+      "destination": "desktop-app/RESEARCH_README.md",
+      "sha256": "d004384c30df20e199e42e5fa35e57a57a0e5bb28da32602924064a58252c6da",
+      "publication": "included"
+    },
+    {
+      "source": "moldsenseusercodev1/run_dashboard.py",
+      "destination": "desktop-app/run_dashboard.py",
+      "sha256": "677dcfc87558a19cae5b90caff1555532eb4c79d36abd6391a94b263cb5299e3",
+      "publication": "included"
+    },
+    {
+      "source": "moldsenseusercodev1/start_dashboard.ps1",
+      "destination": "desktop-app/start_dashboard.ps1",
+      "sha256": "381646333c27d92b7dcab1f56e1063c529523fa25d80a020400f57ab51c77f0b",
+      "publication": "included"
+    },
+    {
+      "source": "moldsenseusercodev1/assets/moldsense-icon.png",
+      "destination": "desktop-app/assets/moldsense-icon.png",
+      "sha256": "43d9174060503b24000529d89809d0740e33d60164358ebe2f4410b6fa173733",
+      "publication": "included"
+    },
+    {
+      "source": "moldsenseusercodev1/assets/moldsense.ico",
+      "destination": "desktop-app/assets/moldsense.ico",
+      "sha256": "9068686659b350a91b0f11d3584c85b27bbbcb18b2bf10d6ba0f5cf46fe31edd",
+      "publication": "included"
+    },
+    {
+      "source": "moldsenseusercodev1/docs/RESEARCH_DESIGN.md",
+      "destination": "desktop-app/docs/RESEARCH_DESIGN.md",
+      "sha256": "7defb436502b9bf92f8af1cf30e7fec28f842414fe67cf4c50870e2020470ebb",
+      "publication": "included"
+    },
+    {
+      "source": "moldsenseusercodev1/docs/RESEARCH_VALIDATION.md",
+      "destination": "desktop-app/docs/RESEARCH_VALIDATION.md",
+      "sha256": "33422eb07d5829154f1168e3fa196d19386282753f7e7ddf7395f5b4d9de9ab6",
+      "publication": "included"
+    },
+    {
+      "source": "moldsenseusercodev1/firmware_extension/SAFE_LOG_DELETE.patch",
+      "destination": "desktop-app/firmware_extension/SAFE_LOG_DELETE.patch",
+      "sha256": "c82a3e34ec9bedc3963d59d9d97868dac1fc56bc968dae1985bc07fccf132808",
+      "publication": "included"
+    },
+    {
+      "source": "moldsenseusercodev1/moldsense_user/analysis.py",
+      "destination": "desktop-app/moldsense_user/analysis.py",
+      "sha256": "8cc8920ab6a9ea36c249ce4a31dc91c32a68d7ed03f130af816f1d456d39aed5",
+      "publication": "included"
+    },
+    {
+      "source": "moldsenseusercodev1/moldsense_user/app.py",
+      "destination": "desktop-app/moldsense_user/app.py",
+      "sha256": "2630da74d7d5f08766865ccfc9416fe193b818469464a64331cd2dee43385534",
+      "publication": "included"
+    },
+    {
+      "source": "moldsenseusercodev1/moldsense_user/chart.py",
+      "destination": "desktop-app/moldsense_user/chart.py",
+      "sha256": "d9fc1375bfd633e3da21319fea78011eaf2e5b8e0dfc6c5487f5b7e7f9fbf6d9",
+      "publication": "included"
+    },
+    {
+      "source": "moldsenseusercodev1/moldsense_user/datasets.py",
+      "destination": "desktop-app/moldsense_user/datasets.py",
+      "sha256": "fcf65fe90e5eaf321911fadc6087bf10f34e2aba364fbb60f6f93f31156727c4",
+      "publication": "included"
+    },
+    {
+      "source": "moldsenseusercodev1/moldsense_user/device.py",
+      "destination": "desktop-app/moldsense_user/device.py",
+      "sha256": "9885e897ad96bda60dc2421c48de1e888756c8da03fb5bffad668fe1e91b6cc0",
+      "publication": "included"
+    },
+    {
+      "source": "moldsenseusercodev1/moldsense_user/references.py",
+      "destination": "desktop-app/moldsense_user/references.py",
+      "sha256": "54b3492b09a04a01a9bac662ef223984fcb2353f82d552b84df6269979db8820",
+      "publication": "included"
+    },
+    {
+      "source": "moldsenseusercodev1/moldsense_user/storage.py",
+      "destination": "desktop-app/moldsense_user/storage.py",
+      "sha256": "d304823898fd9865003374317082fc65c82d15848129ab07f0ced5abc99daad3",
+      "publication": "included"
+    },
+    {
+      "source": "moldsenseusercodev1/moldsense_user/__init__.py",
+      "destination": "desktop-app/moldsense_user/__init__.py",
+      "sha256": "1cc11b9a22db5c2c80c69ddf16729b312b69fbca1781d3853f647ce8586aaafb",
+      "publication": "included"
+    },
+    {
+      "source": "moldsenseusercodev1/moldsense_user/research/acquisition.py",
+      "destination": "desktop-app/moldsense_user/research/acquisition.py",
+      "sha256": "f7e03d9f3bba36f5ce81cd2218b8719e422a3bb836a42db12b906bc557ad450e",
+      "publication": "included"
+    },
+    {
+      "source": "moldsenseusercodev1/moldsense_user/research/database.py",
+      "destination": "desktop-app/moldsense_user/research/database.py",
+      "sha256": "c3f1d992d00afd98b2e7f7c109719dff0714eeeeb695456d673ff95c09ab25fb",
+      "publication": "included"
+    },
+    {
+      "source": "moldsenseusercodev1/moldsense_user/research/exports.py",
+      "destination": "desktop-app/moldsense_user/research/exports.py",
+      "sha256": "c918d2a5973bacebefdf5909f22ea9bbf654ec2a6dded14da0a39e3e2fe686d4",
+      "publication": "included"
+    },
+    {
+      "source": "moldsenseusercodev1/moldsense_user/research/migration.py",
+      "destination": "desktop-app/moldsense_user/research/migration.py",
+      "sha256": "2deeb65d539c2691bf2b9c2414c1e2c212720963f17ae0b734da1bf58775b3a9",
+      "publication": "included"
+    },
+    {
+      "source": "moldsenseusercodev1/moldsense_user/research/plots.py",
+      "destination": "desktop-app/moldsense_user/research/plots.py",
+      "sha256": "7126a7b4c7943cd9edf44df6d938ab69934dbbf36474cab2fe077ad70c7482bc",
+      "publication": "included"
+    },
+    {
+      "source": "moldsenseusercodev1/moldsense_user/research/protocol.py",
+      "destination": "desktop-app/moldsense_user/research/protocol.py",
+      "sha256": "b8bd9b12afd0ef1bc80a7b2e2ac2a5a33f3bd8c4063d9bd20047bfbb88a9673c",
+      "publication": "included"
+    },
+    {
+      "source": "moldsenseusercodev1/moldsense_user/research/statistics.py",
+      "destination": "desktop-app/moldsense_user/research/statistics.py",
+      "sha256": "b67f0af4971fb8bddd011410f5681c050fb986bff5b9a660830dd17128a5a59b",
+      "publication": "included"
+    },
+    {
+      "source": "moldsenseusercodev1/moldsense_user/research/ui.py",
+      "destination": "desktop-app/moldsense_user/research/ui.py",
+      "sha256": "53e50c2dcbd20d0012594177328bf1be128d4bcf8a74b71d59afcaffeae6c352",
+      "publication": "included"
+    },
+    {
+      "source": "moldsenseusercodev1/moldsense_user/research/ui_actions.py",
+      "destination": "desktop-app/moldsense_user/research/ui_actions.py",
+      "sha256": "dbc2e5d7318e93ed8c35cc3db5a2b3ea8fb244aa1afd4f5806ebe402bdb96427",
+      "publication": "included"
+    },
+    {
+      "source": "moldsenseusercodev1/moldsense_user/research/ui_charts.py",
+      "destination": "desktop-app/moldsense_user/research/ui_charts.py",
+      "sha256": "d74bb2590c5ab108ba49cf067f26402d87f11e8b952707a4275e97f02107d0fa",
+      "publication": "included"
+    },
+    {
+      "source": "moldsenseusercodev1/moldsense_user/research/ui_common.py",
+      "destination": "desktop-app/moldsense_user/research/ui_common.py",
+      "sha256": "f333f06131d35bb8f2bedb926b9d83c8b863d56912daaf4b46acb0891527c8ff",
+      "publication": "included"
+    },
+    {
+      "source": "moldsenseusercodev1/moldsense_user/research/ui_layout.py",
+      "destination": "desktop-app/moldsense_user/research/ui_layout.py",
+      "sha256": "f015762c03bcca5b2a2222b798df40cf027248aa61bc8482359e13a0bc3cd841",
+      "publication": "included"
+    },
+    {
+      "source": "moldsenseusercodev1/moldsense_user/research/__init__.py",
+      "destination": "desktop-app/moldsense_user/research/__init__.py",
+      "sha256": "4b75a85e63ce6f7994bbb10546b69d2e8541aca3468a5778e46fd90f738ca997",
+      "publication": "included"
+    },
+    {
+      "source": "moldsenseusercodev1/packaging/install.cmd",
+      "destination": "desktop-app/packaging/install.cmd",
+      "sha256": "3abf76053dad9e0909b1231dddf1f5566f9573eae08171766338aae32e6c189e",
+      "publication": "included"
+    },
+    {
+      "source": "moldsenseusercodev1/packaging/install_product.ps1",
+      "destination": "desktop-app/packaging/install_product.ps1",
+      "sha256": "5ce3fd74e05176d86ab54a3cfc5e56ed051aad19b674a913cb01965efc45cecd",
+      "publication": "included"
+    },
+    {
+      "source": "moldsenseusercodev1/packaging/uninstall_product.ps1",
+      "destination": "desktop-app/packaging/uninstall_product.ps1",
+      "sha256": "31c2029f45e68841ad2a498500b3ec2eb2ed837cff21db93fb03322b33f12515",
+      "publication": "included"
+    },
+    {
+      "source": "moldsenseusercodev1/packaging/version_info.txt",
+      "destination": "desktop-app/packaging/version_info.txt",
+      "sha256": "cf81a0a286826a31ef978c6282e423b113225504404445707d670a05d407916c",
+      "publication": "included"
+    },
+    {
+      "source": "moldsenseusercodev1/tests/benchmark_research.py",
+      "destination": "desktop-app/tests/benchmark_research.py",
+      "sha256": "a74b84a5a7bf0f3564fa07d9283ed62fc0f6dc471c3840e5187e8a3b9e470e17",
+      "publication": "included"
+    },
+    {
+      "source": "moldsenseusercodev1/tests/test_core.py",
+      "destination": "desktop-app/tests/test_core.py",
+      "sha256": "2594f354a0ac993c05b983695dd6dc53fe19264ff0c15ffcc91c594a5b30e1e4",
+      "publication": "included"
+    },
+    {
+      "source": "moldsenseusercodev1/tests/test_research.py",
+      "destination": "desktop-app/tests/test_research.py",
+      "sha256": "7a59f37321524d1b08566e9eecc88f68273f3258259bd9e7a7197a83afdc6a87",
+      "publication": "included"
+    },
+    {
+      "source": "moldsenseusercodev1/tests/ui_smoke.py",
+      "destination": "desktop-app/tests/ui_smoke.py",
+      "sha256": "e46a22fb1e1223510384b42bcf8c670c3fa907928fed64f8e1cc9a8e61de9478",
+      "publication": "included"
+    },
+    {
+      "source": "moldsenseusercodev1/tests/fixtures/firmware_readings.ndjson",
+      "destination": "desktop-app/tests/fixtures/firmware_readings.ndjson",
+      "sha256": "ecdf98f6ad2995014ea7322b9d65800795cc1a1302f3838e5ea92b822c000eae",
+      "publication": "included"
+    },
+    {
+      "source": "moldsensecodev2.0/BsecMode.cpp",
+      "destination": "firmware/legacy/moldsensecodev2.0/BsecMode.cpp",
+      "sha256": "766527c4878ce52262977a90249e1fa54cfad74a7808adbb49451d5ffcefcfbc",
+      "publication": "included"
+    },
+    {
+      "source": "moldsensecodev2.0/BsecMode.h",
+      "destination": "firmware/legacy/moldsensecodev2.0/BsecMode.h",
+      "sha256": "ac25f6cf71b6842b2f56d782cec7cf5898d4a9b347fdee4a278284377357c523",
+      "publication": "included"
+    },
+    {
+      "source": "moldsensecodev2.0/CaptureMode.cpp",
+      "destination": "firmware/legacy/moldsensecodev2.0/CaptureMode.cpp",
+      "sha256": "7a2284badf8ed685ca15a033850a21863f69f709d58a3fbfd4f8ecc0a65682ff",
+      "publication": "included"
+    },
+    {
+      "source": "moldsensecodev2.0/CaptureMode.h",
+      "destination": "firmware/legacy/moldsensecodev2.0/CaptureMode.h",
+      "sha256": "cf829584e21f30c0565f902c448748ba550c8db0009cf01892fc93f163f97e9a",
+      "publication": "included"
+    },
+    {
+      "source": "moldsensecodev2.0/ModeSwitch.cpp",
+      "destination": "firmware/legacy/moldsensecodev2.0/ModeSwitch.cpp",
+      "sha256": "aa8c4577e43c37e45c63fb0b8d246dc282fc8d589ecd47699390a2b012d31208",
+      "publication": "included"
+    },
+    {
+      "source": "moldsensecodev2.0/ModeSwitch.h",
+      "destination": "firmware/legacy/moldsensecodev2.0/ModeSwitch.h",
+      "sha256": "3c1ccce2a28967b765e247e7fd812e88843b560d242b016edd6274349f06c335",
+      "publication": "included"
+    },
+    {
+      "source": "moldsensecodev2.0/moldsensecodev2.0.ino",
+      "destination": "firmware/legacy/moldsensecodev2.0/moldsensecodev2.0.ino",
+      "sha256": "e692add9bd4fffbf1c9dc295d799267c8844bf161c1240366d0c794b3e57e02c",
+      "publication": "included"
+    },
+    {
+      "source": "moldsensecodev2.0/MoldSenseConfig.h",
+      "destination": "firmware/legacy/moldsensecodev2.0/MoldSenseConfig.h",
+      "sha256": "2ee9f30f5a4c4c69ed846d2046192d04c0a2cb5920505702ff32d8405a3d5776",
+      "publication": "included"
+    },
+    {
+      "source": "moldsensecodev2.0/moldsense_cli.py",
+      "destination": "firmware/legacy/moldsensecodev2.0/moldsense_cli.py",
+      "sha256": "efbf1004f4178abf72820a1db45e85760687474750e2237ddb57733c3deeb81b",
+      "publication": "included"
+    },
+    {
+      "source": "moldsensecodev2.0/OledDisplay.cpp",
+      "destination": "firmware/legacy/moldsensecodev2.0/OledDisplay.cpp",
+      "sha256": "9caa3419df3ecae8b9231e0199cfbaff2f8fd20b20a36241c1849905e3ffc1d6",
+      "publication": "included"
+    },
+    {
+      "source": "moldsensecodev2.0/OledDisplay.h",
+      "destination": "firmware/legacy/moldsensecodev2.0/OledDisplay.h",
+      "sha256": "2b93994bca35e4e479fd9ed013f25f6ae1a8ce659464ec96362506e74fa6c6df",
+      "publication": "included"
+    },
+    {
+      "source": "moldsensecodev2.0/PersistentClock.cpp",
+      "destination": "firmware/legacy/moldsensecodev2.0/PersistentClock.cpp",
+      "sha256": "5cb9672a07aa5c610d091980fd577b93216cf53db26313db73efec1d98370d33",
+      "publication": "included"
+    },
+    {
+      "source": "moldsensecodev2.0/PersistentClock.h",
+      "destination": "firmware/legacy/moldsensecodev2.0/PersistentClock.h",
+      "sha256": "7e9ac2f6a35251ad7eea77b2170298250a5bcafe42cd7195851e71a3bc2fbcd3",
+      "publication": "included"
+    },
+    {
+      "source": "moldsensecodev2.0/README.md",
+      "destination": "firmware/legacy/moldsensecodev2.0/README.md",
+      "sha256": "aa43fed19322d8236ef76724b0fa795141d8737627ed2ba10ed8095a0de4ad61",
+      "publication": "included"
+    },
+    {
+      "source": "moldsensecodev2.0/SerialFileStore.cpp",
+      "destination": "firmware/legacy/moldsensecodev2.0/SerialFileStore.cpp",
+      "sha256": "82cac3835ce07f44ec8893a5beca72b54cdbb578b1499db20a6f724d74187b2a",
+      "publication": "included"
+    },
+    {
+      "source": "moldsensecodev2.0/SerialFileStore.h",
+      "destination": "firmware/legacy/moldsensecodev2.0/SerialFileStore.h",
+      "sha256": "a9aab758b3ac73445a5de294ab428e1ff2d53e8bab077ba9c5b55f679f1d4e66",
+      "publication": "included"
+    },
+    {
+      "source": "moldsensecodev2.0/SessionJournal.cpp",
+      "destination": "firmware/legacy/moldsensecodev2.0/SessionJournal.cpp",
+      "sha256": "01f1962817b6757cd4e47505fd474d28ed6f2742b37f34de1d5e4c965776c431",
+      "publication": "included"
+    },
+    {
+      "source": "moldsensecodev2.0/SessionJournal.h",
+      "destination": "firmware/legacy/moldsensecodev2.0/SessionJournal.h",
+      "sha256": "8eb917ac77ab9cdde7c5507b09ea5279119aeede1e70005da91ca807df3b0033",
+      "publication": "included"
+    },
+    {
+      "source": "moldsense_firmware/backup_esp32.py",
+      "destination": "firmware/legacy/moldsense_firmware/backup_esp32.py",
+      "sha256": "2aed9b6752962dc718dc5cfd5e5740fded8fc664d78934924e0a6778282c01a4",
+      "publication": "included"
+    },
+    {
+      "source": "moldsense_firmware/BsecMode.cpp",
+      "destination": "firmware/legacy/moldsense_firmware/BsecMode.cpp",
+      "sha256": "766527c4878ce52262977a90249e1fa54cfad74a7808adbb49451d5ffcefcfbc",
+      "publication": "included"
+    },
+    {
+      "source": "moldsense_firmware/BsecMode.h",
+      "destination": "firmware/legacy/moldsense_firmware/BsecMode.h",
+      "sha256": "ac25f6cf71b6842b2f56d782cec7cf5898d4a9b347fdee4a278284377357c523",
+      "publication": "included"
+    },
+    {
+      "source": "moldsense_firmware/CaptureMode.cpp",
+      "destination": "firmware/legacy/moldsense_firmware/CaptureMode.cpp",
+      "sha256": "7a2284badf8ed685ca15a033850a21863f69f709d58a3fbfd4f8ecc0a65682ff",
+      "publication": "included"
+    },
+    {
+      "source": "moldsense_firmware/CaptureMode.h",
+      "destination": "firmware/legacy/moldsense_firmware/CaptureMode.h",
+      "sha256": "cf829584e21f30c0565f902c448748ba550c8db0009cf01892fc93f163f97e9a",
+      "publication": "included"
+    },
+    {
+      "source": "moldsense_firmware/cap_1_vs_cap_2_deviation.md",
+      "destination": "firmware/legacy/moldsense_firmware/cap_1_vs_cap_2_deviation.md",
+      "sha256": "1f94794de4a033d0ec143f4a637b40c52449e1f81060642f5cd47b1acf716620",
+      "publication": "included"
+    },
+    {
+      "source": "moldsense_firmware/compare_bmerawdata.py",
+      "destination": "firmware/legacy/moldsense_firmware/compare_bmerawdata.py",
+      "sha256": "55060d9aab7c57dcc5e4455ae25bbdb889fbb6a0ff1fc3d880b28167accd2151",
+      "publication": "included"
+    },
+    {
+      "source": "moldsense_firmware/Dht22Verifier.cpp",
+      "destination": "firmware/legacy/moldsense_firmware/Dht22Verifier.cpp",
+      "sha256": "df04154fffce18181fd4b1b31060e48f288d05a80e1f6642c723ab63b7497e11",
+      "publication": "included"
+    },
+    {
+      "source": "moldsense_firmware/Dht22Verifier.h",
+      "destination": "firmware/legacy/moldsense_firmware/Dht22Verifier.h",
+      "sha256": "ade88a6d670a1427005c749390d7cd3104e788e4683e0ba43dc0181f899a91ae",
+      "publication": "included"
+    },
+    {
+      "source": "moldsense_firmware/fix_ai_studio_board_type.py",
+      "destination": "firmware/legacy/moldsense_firmware/fix_ai_studio_board_type.py",
+      "sha256": "7fbc4392cb361658b85452113371a51ed72a5e05fbc1b2985df64100e858d658",
+      "publication": "included"
+    },
+    {
+      "source": "moldsense_firmware/MoldSenseConfig.h",
+      "destination": "firmware/legacy/moldsense_firmware/MoldSenseConfig.h",
+      "sha256": "86b70c3d7d8968deffdb4ceade43a4eb7f02c45dd2fb56f6de5fa351971b0085",
+      "publication": "included"
+    },
+    {
+      "source": "moldsense_firmware/moldsense_cli.py",
+      "destination": "firmware/legacy/moldsense_firmware/moldsense_cli.py",
+      "sha256": "efbf1004f4178abf72820a1db45e85760687474750e2237ddb57733c3deeb81b",
+      "publication": "included"
+    },
+    {
+      "source": "moldsense_firmware/moldsense_firmware.ino",
+      "destination": "firmware/legacy/moldsense_firmware/moldsense_firmware.ino",
+      "sha256": "9f4ff438c5a899010039b292d775238a611a98971dacb01bf9c8b58ce1d43324",
+      "publication": "included"
+    },
+    {
+      "source": "moldsense_firmware/OledDisplay.cpp",
+      "destination": "firmware/legacy/moldsense_firmware/OledDisplay.cpp",
+      "sha256": "5a2a27db744f5771178c8d7dc92322a16a1e7189ea4594e0be557d1dcb713857",
+      "publication": "included"
+    },
+    {
+      "source": "moldsense_firmware/OledDisplay.h",
+      "destination": "firmware/legacy/moldsense_firmware/OledDisplay.h",
+      "sha256": "812046214564f6a0abfc23ce7a98470b074f06cc5b39836ee988d9bfee6a5bc1",
+      "publication": "included"
+    },
+    {
+      "source": "moldsense_firmware/PersistentClock.cpp",
+      "destination": "firmware/legacy/moldsense_firmware/PersistentClock.cpp",
+      "sha256": "5cb9672a07aa5c610d091980fd577b93216cf53db26313db73efec1d98370d33",
+      "publication": "included"
+    },
+    {
+      "source": "moldsense_firmware/PersistentClock.h",
+      "destination": "firmware/legacy/moldsense_firmware/PersistentClock.h",
+      "sha256": "7e9ac2f6a35251ad7eea77b2170298250a5bcafe42cd7195851e71a3bc2fbcd3",
+      "publication": "included"
+    },
+    {
+      "source": "moldsense_firmware/README.md",
+      "destination": "firmware/legacy/moldsense_firmware/README.md",
+      "sha256": "81fe3d8d3f058ce57d093af4094be4322205e11f04ca62d10ef49d618002347d",
+      "publication": "included"
+    },
+    {
+      "source": "moldsense_firmware/SerialFileStore.cpp",
+      "destination": "firmware/legacy/moldsense_firmware/SerialFileStore.cpp",
+      "sha256": "82cac3835ce07f44ec8893a5beca72b54cdbb578b1499db20a6f724d74187b2a",
+      "publication": "included"
+    },
+    {
+      "source": "moldsense_firmware/SerialFileStore.h",
+      "destination": "firmware/legacy/moldsense_firmware/SerialFileStore.h",
+      "sha256": "a9aab758b3ac73445a5de294ab428e1ff2d53e8bab077ba9c5b55f679f1d4e66",
+      "publication": "included"
+    },
+    {
+      "source": "moldsense_firmware/SessionJournal.cpp",
+      "destination": "firmware/legacy/moldsense_firmware/SessionJournal.cpp",
+      "sha256": "01f1962817b6757cd4e47505fd474d28ed6f2742b37f34de1d5e4c965776c431",
+      "publication": "included"
+    },
+    {
+      "source": "moldsense_firmware/SessionJournal.h",
+      "destination": "firmware/legacy/moldsense_firmware/SessionJournal.h",
+      "sha256": "8eb917ac77ab9cdde7c5507b09ea5279119aeede1e70005da91ca807df3b0033",
+      "publication": "included"
+    },
+    {
+      "source": "bme688_logger/bme688_logger.ino",
+      "destination": "firmware/legacy/bme688_logger/bme688_logger.ino",
+      "sha256": "13f4769b9dd6ecce72f9cb1e2fc15bf53cac3e7fba58edfadc25e9b1bd5f70e9",
+      "publication": "included"
+    },
+    {
+      "source": "bme688_logger/download_bme688_log.py",
+      "destination": "firmware/legacy/bme688_logger/download_bme688_log.py",
+      "sha256": "032943ccb6fa68bd2c5e1f9358af41c904ac3d0093b7a951a5a3ce5dbb780b6c",
+      "publication": "included"
+    },
+    {
+      "source": "bme688_logger/README.md",
+      "destination": "firmware/legacy/bme688_logger/README.md",
+      "sha256": "85521cb7600ca3f191eaaf4570ad70cc1a2a44835eb952bd9f395285348757e5",
+      "publication": "included"
+    },
+    {
+      "source": "bme688_logger/transfer_bme688_file.py",
+      "destination": "firmware/legacy/bme688_logger/transfer_bme688_file.py",
+      "sha256": "555705f4c5c1ebfac5f60704f3a610a6ab2f8bfb47186238ed21e4f050ae63f2",
+      "publication": "included"
+    },
+    {
+      "source": "esp32_comb_capacitance/esp32_comb_capacitance.ino",
+      "destination": "firmware/tools/esp32_comb_capacitance/esp32_comb_capacitance.ino",
+      "sha256": "f8782a8ef8372eac4cbd8a5071c21a646a365f5e27a7efd6ea1915acfc1c4154",
+      "publication": "included"
+    },
+    {
+      "source": "one_shot_bme_ai_capture/backup_one_shot.py",
+      "destination": "firmware/tools/one_shot_bme_ai_capture/backup_one_shot.py",
+      "sha256": "4448dce9d2b5b7dccc3b4d33b21939fa25f5d9013efac6d3a26091ef42f24791",
+      "publication": "included"
+    },
+    {
+      "source": "one_shot_bme_ai_capture/one_shot_bme_ai_capture.ino",
+      "destination": "firmware/tools/one_shot_bme_ai_capture/one_shot_bme_ai_capture.ino",
+      "sha256": "b4f392d944b308c222bf6fa1457faf56bd60e112fc1ecc7cc1d8321e578ab4a6",
+      "publication": "included"
+    },
+    {
+      "source": "one_shot_bme_ai_capture/README.md",
+      "destination": "firmware/tools/one_shot_bme_ai_capture/README.md",
+      "sha256": "c01c0febe1b84182716d7bdf7998afe867b849c7551e4647772a1143198f7d4c",
+      "publication": "included"
+    },
+    {
+      "source": "one_shot_bme_ai_capture/serial_probe.py",
+      "destination": "firmware/tools/one_shot_bme_ai_capture/serial_probe.py",
+      "sha256": "ad02bb4711273458ac4d4454e52c3a1b9a72b63568e702f132aa1bcf4f2a00cb",
+      "publication": "included"
+    },
+    {
+      "source": "one_shot_bme_ai_capture/validate_bmerawdata.py",
+      "destination": "firmware/tools/one_shot_bme_ai_capture/validate_bmerawdata.py",
+      "sha256": "5ae59075c5f66db6cc8fc4235bb47b1ab70a8155dc2a50a1c203141526a0dc1a",
+      "publication": "included"
+    }
+  ],
+  "notes": "Experimental captures and personal filesystem paths are excluded from the public source import."
+}
