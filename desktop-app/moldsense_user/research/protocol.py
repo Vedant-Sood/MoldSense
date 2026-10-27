@@ -52,6 +52,7 @@ NUMERIC_FIELDS = {
     "wall_contribution",
     "condensation_contribution",
     "voc_contribution",
+    "sample_interval_ms",
 }
 
 
