@@ -300,14 +300,15 @@ class Actions:
         ttk.Button(dialog, text="Apply", command=apply).grid(row=12, column=1, pady=10)
 
     def jump_time(self):
-        value = simpledialog.askstring("Jump", "UTC ISO timestamp:", parent=self)
+        value = simpledialog.askstring(
+            "Jump", "ISO timestamp (UTC unless an offset is given):", parent=self
+        )
         if value:
             try:
-                epoch = (
-                    datetime.fromisoformat(value.replace("Z", "+00:00"))
-                    .replace(tzinfo=timezone.utc)
-                    .timestamp()
-                )
+                stamp = datetime.fromisoformat(value.strip().replace("Z", "+00:00"))
+                if stamp.tzinfo is None:
+                    stamp = stamp.replace(tzinfo=timezone.utc)
+                epoch = stamp.timestamp()
                 rows = self.db.query([self.session], epoch, limit=1)
             except Exception as e:
                 messagebox.showerror("Timestamp", str(e))
