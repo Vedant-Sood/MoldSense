@@ -1,8 +1,11 @@
 """Read-only import of legacy captures; absent measurements remain null."""
 
 import csv, hashlib, json, math, time
+from datetime import datetime, timezone
 from pathlib import Path
 from .database import utc
+
+PLAUSIBLE_EPOCH = 946684800  # 2000-01-01; unset legacy clocks report 0 or uptime.
 
 
 def legacy_rows(path):
@@ -40,6 +43,74 @@ def legacy_rows(path):
                 yield mapped, row
 
 
+def _number(value):
+    try:
+        value = float(value)
+    except (TypeError, ValueError):
+        return None
+    return value if math.isfinite(value) else None
+
+
+def _original_epoch(mapped):
+    epoch = _number(mapped.get("unix_epoch"))
+    if epoch is not None and epoch >= PLAUSIBLE_EPOCH:
+        return epoch
+    text = str(mapped.get("iso_utc") or mapped.get("timestamp") or "").strip()
+    if text and text != "UNSET":
+        try:
+            stamp = datetime.fromisoformat(text.replace("Z", "+00:00"))
+        except ValueError:
+            return None
+        if stamp.tzinfo is None:
+            stamp = stamp.replace(tzinfo=timezone.utc)
+        return stamp.timestamp()
+    return None
+
+
+def time_basis(path):
+    """One basis per file so a clock set part-way through cannot reorder rows."""
+    utc_rows = uptime_rows = total = 0
+    for mapped, _raw in legacy_rows(path):
+        total += 1
+        utc_rows += _original_epoch(mapped) is not None
+        uptime_rows += _number(mapped.get("uptime_ms")) is not None
+    if total and utc_rows == total:
+        return "DEVICE_UTC"
+    if total and uptime_rows == total:
+        return "UPTIME_RELATIVE_TO_IMPORT"
+    return "ROW_INDEX_SECONDS"
+
+
+class LegacyClock:
+    """Ordering time for imported rows on a single time basis."""
+
+    def __init__(self, anchor, basis):
+        self.anchor = anchor
+        self.basis = basis
+        self.previous = None
+        self.base = 0.0
+        self.segment_start = None
+        self.last_uptime = None
+
+    def __call__(self, mapped, index):
+        if self.basis == "DEVICE_UTC":
+            epoch = _original_epoch(mapped)
+        elif self.basis == "UPTIME_RELATIVE_TO_IMPORT":
+            uptime = _number(mapped.get("uptime_ms"))
+            if self.segment_start is None or uptime < self.last_uptime:
+                # First row, or uptime restarted: continue after the previous row.
+                self.base = 0.0 if self.previous is None else self.previous + 1 - self.anchor
+                self.segment_start = uptime
+            self.last_uptime = uptime
+            epoch = self.anchor + self.base + (uptime - self.segment_start) / 1000
+        else:
+            epoch = self.anchor + index
+        if self.previous is not None and epoch <= self.previous:
+            epoch = self.previous + 0.001
+        self.previous = epoch
+        return epoch
+
+
 def import_legacy(db, path, experiment=None):
     path = Path(path)
     payload = path.read_bytes()
@@ -65,48 +136,65 @@ def import_legacy(db, path, experiment=None):
         DEFAULT_SETTINGS,
         "legacy",
     )
-    archive = db.root / "legacy_sources"
-    archive.mkdir(exist_ok=True)
-    (archive / (digest + path.suffix)).write_bytes(payload)
-    frames = []
-    epoch = time.time()
-    for index, (mapped, raw) in enumerate(legacy_rows(path)):
-        packet = {
-            "type": "reading",
-            "protocol_version": 1,
-            "device_id": "LEGACY_UNKNOWN",
-            "firmware_version": "UNKNOWN",
-            "boot_id": digest[:16],
-            "sequence": index,
-            "uptime_ms": None,
-            "source": "legacy",
-            "data_quality": "LEGACY_INCOMPLETE",
-            "legacy_original": raw,
-        }
+    try:
+        archive = db.root / "legacy_sources"
+        archive.mkdir(exist_ok=True)
+        (archive / (digest + path.suffix)).write_bytes(payload)
+        frames = []
+        clock = LegacyClock(time.time(), time_basis(path))
         from .database import FIELDS
 
-        for field in FIELDS + ["uptime_ms"]:
-            try:
-                value = float(mapped[field])
-                packet[field] = value if math.isfinite(value) else None
-            except (KeyError, ValueError, TypeError):
-                pass
-        # Import time is receipt time; original timestamps are retained verbatim in raw_json.
-        packet["uptime_ms"] = (
-            int(packet["uptime_ms"]) if packet.get("uptime_ms") is not None else None
-        )
-        packet["original_uptime_available"] = "uptime_ms" in mapped
-        frames.append((json.dumps(raw), packet, None, utc(), epoch))
-        if len(frames) >= 500:
+        for index, (mapped, raw) in enumerate(legacy_rows(path)):
+            packet = {
+                "type": "reading",
+                "protocol_version": 1,
+                "device_id": "LEGACY_UNKNOWN",
+                "firmware_version": "UNKNOWN",
+                "boot_id": digest[:16],
+                "sequence": index,
+                "uptime_ms": None,
+                "source": "legacy",
+                "data_quality": "LEGACY_INCOMPLETE",
+                "legacy_original": raw,
+            }
+            for field in FIELDS + ["uptime_ms"]:
+                try:
+                    value = float(mapped[field])
+                    packet[field] = value if math.isfinite(value) else None
+                except (KeyError, ValueError, TypeError):
+                    pass
+            packet["uptime_ms"] = (
+                int(packet["uptime_ms"]) if packet.get("uptime_ms") is not None else None
+            )
+            packet["original_uptime_available"] = "uptime_ms" in mapped
+            # received_at is import time; received_epoch orders rows on their original
+            # time basis so plots and time ranges keep their shape. Originals stay in raw_json.
+            frames.append((json.dumps(raw), packet, None, utc(), clock(mapped, index)))
+            if len(frames) >= 500:
+                db.ingest_batch(session, frames)
+                frames = []
+        if frames:
             db.ingest_batch(session, frames)
-            frames = []
-    if frames:
-        db.ingest_batch(session, frames)
-    db.session_state(session, "stopped")
-    with db.transaction() as conn:
-        conn.execute(
-            "INSERT INTO imports VALUES(?,?,?,?)", (digest, str(path), session, utc())
-        )
+        db.event(session, "LEGACY_TIME_BASIS", {"basis": clock.basis})
+        db.session_state(session, "stopped")
+        with db.transaction() as conn:
+            conn.execute(
+                "INSERT INTO imports VALUES(?,?,?,?)", (digest, str(path), session, utc())
+            )
+    except BaseException:
+        # Leave no half-imported session behind, so a retry starts clean.
+        location = db.rows("SELECT location_id FROM samples WHERE id=?", (sample,))
+        with db.transaction() as conn:
+            for table in ("readings", "packets", "events", "calibrations", "annotations"):
+                conn.execute(f"DELETE FROM {table} WHERE session_id=?", (session,))
+            conn.execute("DELETE FROM sessions WHERE id=?", (session,))
+            conn.execute("DELETE FROM samples WHERE id=?", (sample,))
+            if location:
+                conn.execute(
+                    "DELETE FROM locations WHERE id=? AND id NOT IN (SELECT location_id FROM samples WHERE location_id IS NOT NULL)",
+                    (location[0]["location_id"],),
+                )
+        raise
     return session
 
 

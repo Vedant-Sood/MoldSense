@@ -74,6 +74,8 @@ class CoreTests(unittest.TestCase):
             store=Store(temp); payload=b"iaq,temperature_c,humidity_percent,pressure_pa,gas_ohms\n50,24,45,1002,80000\n"
             path,digest=store.archive("/environment.csv",payload,"COM3")
             self.assertTrue(path.exists()); self.assertEqual(len(digest),64); self.assertEqual(len(store.csv_rows()),1); self.assertTrue(path.with_suffix(".csv.manifest.json").exists())
+            again,_digest=store.archive("/environment.csv",payload,"COM3")
+            self.assertEqual(again,path); self.assertEqual(len(store.csv_rows()),1); self.assertEqual(len(store.imports()),1)
             store.db.close()
     def test_bundled_cap_samples(self):
         samples=bundled_capture_rows()
