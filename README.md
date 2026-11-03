@@ -1,5 +1,7 @@
 # MoldSense
 
+[Documentation index](docs/README.md)
+
 MoldSense combines an ESP32, a Bosch BME688 and a capacitive wall probe with a Windows research application. It records wall response, gas resistance and environmental conditions, then provides plots, session management, statistics and reproducible exports.
 
 **Status:** research release candidate. Desktop **2.0.0-rc1**, integrated firmware **1.0.0-rc1**, serial protocol **1**. The firmware's 0–100 screening index is unvalidated; it is not a calibrated probability of mold. No validated mold classifier is included.
