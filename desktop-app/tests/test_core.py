@@ -94,4 +94,17 @@ class CoreTests(unittest.TestCase):
             self.assertFalse(tailored.supports("iaq"))
             store.db.close()
 
+
+
+class CsvSafetyTests(unittest.TestCase):
+    def test_formula_text_is_neutralised_but_numbers_are_kept(self):
+        from moldsense_user.csv_safety import safe_row, spreadsheet_safe
+        self.assertEqual(spreadsheet_safe("=HYPERLINK(\"x\")"), "'=HYPERLINK(\"x\")")
+        for text in ("+cmd", "-2+3", "@SUM(A1)", "\tx"):
+            self.assertTrue(spreadsheet_safe(text).startswith("'"))
+        for value in ("-3.5", "+1e3", "sample A", "", -2.0, None, 7):
+            self.assertEqual(spreadsheet_safe(value), value)
+        self.assertEqual(safe_row({"a": "=1+1", "b": 1.5}), {"a": "'=1+1", "b": 1.5})
+
+
 if __name__=="__main__": unittest.main()
