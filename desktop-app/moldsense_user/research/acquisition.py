@@ -54,6 +54,17 @@ def identify(port, expected=None, opener=serial_open):
         raise
 
 
+class LogTransferError(ValueError):
+    """A device-log transfer failed; acquisition itself remains healthy."""
+
+
+def sample_interval_s(packet):
+    value = packet.get("sample_interval_ms")
+    if type(value) not in (int, float) or not 1 <= value <= 3_600_000:
+        return 1.0
+    return value / 1000
+
+
 class Acquisition:
     def __init__(self, db):
         self.db = db
@@ -152,7 +163,11 @@ class Acquisition:
                 self.db.ingest_batch(
                     session, [(frame.raw, packet, reason, received, epoch)], False
                 )
-                raise ValueError(reason)
+                # Stop appending; the .partial file is kept and never certified.
+                if self.log_handle:
+                    self.log_handle.close()
+                    self.log_handle = None
+                raise LogTransferError(reason)
 
             if packet:
                 marker, gap = self.tracker.observe(packet)
@@ -383,7 +398,11 @@ class Acquisition:
                                 self.db.event(
                                     self.session, "UNMATCHED_ACK", frame.message
                                 )
-                    self.process(frame)
+                    try:
+                        self.process(frame)
+                    except LogTransferError as error:
+                        # Only the download failed; keep the link and live readings.
+                        self.notify("protocol_error", {"reason": str(error)})
                 for request, (command, deadline) in list(pending.items()):
                     if time.monotonic() > deadline:
                         del pending[request]
@@ -396,7 +415,7 @@ class Acquisition:
                             "COMMAND_TIMEOUT",
                             {"request_id": request, "command": command},
                         )
-                interval = self.latest.get("sample_interval_ms", 1000) / 1000
+                interval = sample_interval_s(self.latest)
                 if time.monotonic() - self.last_packet > max(15, interval * 3):
                     raise TimeoutError("No packets received")
             except Exception as error:

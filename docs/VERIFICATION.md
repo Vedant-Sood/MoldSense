@@ -24,10 +24,23 @@ Current checks include focused regression cases for huge telemetry numbers and i
 
 The default screening index remains unvalidated and no trained mold model is enabled. Bench/field release gates remain in the firmware validation guide. Windows installers were not rebuilt for this source publication.
 
-Local runtime: Python 3.13.9, NumPy 2.3.5, SciPy 1.16.3, Matplotlib 3.10.6, pyserial 3.5. The original requirements-validated.txt remains a historical environment record.
+Local runtime: Python 3.13.9, NumPy 2.3.5, SciPy 1.16.3, Matplotlib 3.10.6, pyserial 3.5. `desktop-app/requirements-validated.txt` pins a different, newer set (NumPy 2.5.3, SciPy 1.18.1, Matplotlib 3.11.2) carried over from the original source; it was not the environment used for the checks in this table.
 
 The earlier Windows host-toolchain failure was resolved for portable verification by running the production host suite in the cloud. This does not replace an ESP32 board build or bench test.
 
 Cloud runtime: Python 3.12.14, NumPy 2.3.5, SciPy 1.17.0, Matplotlib 3.10.8 and pyserial 3.5.
 
 Public-source publication excludes all historical sensor captures and personal filesystem paths. The legacy app handles absent local references; the test suite generates temporary synthetic signals instead of requiring experimental data. The Windows shortcut launcher resolves paths relative to its own directory.
+
+## Desktop fixes — 2026-10-27
+
+Linux, Python 3.12 (with Tk) and 3.13; NumPy 2.5.4, SciPy 1.18.1, Matplotlib 3.11.2, pyserial 3.5.
+
+| Check | Result |
+| --- | --- |
+| Desktop suite | PASS: 33 tests, including new regressions for legacy time ordering, failed-import cleanup, bad log chunks, sample-interval validation and duplicate archives |
+| Offline desktop self-test and full synthetic UI smoke | PASS under Xvfb |
+| C++ host suite and fixture comparison | PASS: 624 assertions; serializer output matches the desktop fixture |
+| Repository checks | PASS |
+
+No firmware source changed. No device was connected.

@@ -59,7 +59,7 @@ Choose a **stopped** session for a publication export so all exported tables des
 
 Reports include wall/gas figures, reference lines, statistics, correlations, environment, annotations, labels and configuration metadata. Print HTML to PDF if needed. PNG/SVG exports are independent figures, not screenshots of the UI; preserve their metadata sidecars with the manuscript files. The QA report under `../outputs/moldsense_research_qa` is prominently SYNTHETIC and must not be treated as experimental evidence.
 
-Device log download validates chunk CRC, contiguous offsets and total length, then writes a SHA-256 sidecar under `device_logs`. Interrupted downloads retain `.partial`; a success ACK alone does not certify a download.
+Device log download validates chunk CRC, contiguous offsets and total length, then writes a SHA-256 sidecar under `device_logs`. Interrupted or corrupted downloads retain `.partial` and report a protocol error without dropping the live connection; a success ACK alone does not certify a download. Device CSV logging is disabled in the default firmware build (`loggingEnabled` in `Config.h`), so downloads are empty unless it is enabled.
 
 ## Recovery and limits
 

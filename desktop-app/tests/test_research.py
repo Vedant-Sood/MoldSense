@@ -9,6 +9,7 @@ from moldsense_user.research.protocol import (
     SequenceTracker,
 )
 from moldsense_user.research.database import Database, utc
+from moldsense_user.research import acquisition as acquisition_module
 from moldsense_user.research.acquisition import Acquisition, identify
 from moldsense_user.research.statistics import (
     describe,
@@ -91,6 +92,18 @@ class ProtocolTests(unittest.TestCase):
                 frame = parse_line(json.dumps(packet(protocol_version=version)))
                 self.assertEqual(frame.error, "PROTOCOL_MISMATCH")
         self.assertIsNone(parse_line(json.dumps(packet())).error)
+
+    def test_sample_interval_must_be_numeric(self):
+        self.assertIsNotNone(
+            parse_line(json.dumps(packet(sample_interval_ms="1000"))).error
+        )
+        self.assertEqual(acquisition_module.sample_interval_s({}), 1.0)
+        self.assertEqual(
+            acquisition_module.sample_interval_s({"sample_interval_ms": None}), 1.0
+        )
+        self.assertEqual(
+            acquisition_module.sample_interval_s({"sample_interval_ms": 5000}), 5.0
+        )
 
     def test_sequence_and_boot(self):
         tracker = SequenceTracker()
@@ -373,6 +386,94 @@ class DatabaseTests(unittest.TestCase):
         self.assertEqual(rows[0]["source"], "legacy")
         self.assertIsNone(rows[0]["wall_moisture_index"])
         self.assertEqual(import_legacy(self.db, source), ident)
+
+
+    def test_legacy_rows_keep_their_time_shape(self):
+        source = Path(self.tmp.name) / "long.csv"
+        lines = ["uptime_ms,gas_ohms,wallFiltered"]
+        lines += [f"{i * 1000},{100000 + i},{500 + i % 50}" for i in range(3000)]
+        # Device rebooted: uptime restarts but rows must stay in order.
+        lines += [f"{i * 1000},{200000 + i},{550}" for i in range(2000)]
+        source.write_text("\n".join(lines) + "\n")
+        ident = import_legacy(self.db, source)
+        rows = self.db.query([ident], order="id")
+        epochs = [row["received_epoch"] for row in rows]
+        self.assertEqual(len(rows), 5000)
+        self.assertTrue(all(b > a for a, b in zip(epochs, epochs[1:])))
+        self.assertAlmostEqual(epochs[2999] - epochs[0], 2999)
+        self.assertGreater(len(self.db.plot_rows(ident)), 500)
+
+    def test_legacy_device_utc_is_used(self):
+        source = Path(self.tmp.name) / "clock.csv"
+        source.write_text(
+            "iso_utc,unix_epoch,uptime_ms,gas_ohms\n"
+            "2026-09-01T00:00:00Z,1788220800,200,440000\n"
+            "2026-09-01T00:01:00Z,1788220860,300,430000\n"
+        )
+        rows = self.db.query([import_legacy(self.db, source)], order="id")
+        self.assertEqual(rows[0]["received_epoch"], 1788220800)
+        self.assertEqual(rows[1]["received_epoch"] - rows[0]["received_epoch"], 60)
+        # A clock set part-way through falls back to uptime for the whole file.
+        mixed = Path(self.tmp.name) / "mixed.csv"
+        mixed.write_text(
+            "iso_utc,unix_epoch,uptime_ms,gas_ohms\n"
+            "UNSET,0,1000,450000\n"
+            "2026-09-01T00:00:00Z,1788220800,3000,440000\n"
+        )
+        rows = self.db.query([import_legacy(self.db, mixed)], order="id")
+        self.assertAlmostEqual(rows[1]["received_epoch"] - rows[0]["received_epoch"], 2)
+
+    def test_failed_legacy_import_leaves_nothing(self):
+        source = Path(self.tmp.name) / "broken.bmerawdata"
+        source.write_text("{not json")
+        before = len(self.db.sessions())
+        with self.assertRaises(ValueError):
+            import_legacy(self.db, source)
+        self.assertEqual(len(self.db.sessions()), before)
+        self.assertEqual(
+            self.db.rows("SELECT COUNT(*) n FROM samples WHERE name='broken'")[0]["n"], 0
+        )
+
+    def test_bad_log_chunk_keeps_connection(self):
+        data = b"uptime_ms,rh\n1000,50\n"
+        frames = [
+            packet(0, type="device_info", product="MoldSense"),
+            packet(1, type="log_chunk", offset=0, hex=data.hex(), crc32=0),
+            packet(2),
+        ]
+
+        class Link:
+            def __init__(self):
+                self.pending = [json.dumps(f).encode() + b"\n" for f in frames[1:]]
+
+            def write(self, data):
+                pass
+
+            def read(self, n):
+                return self.pending.pop(0) if self.pending else b""
+
+            def close(self):
+                pass
+
+        link = Link()
+        original = acquisition_module.identify
+        acquisition_module.identify = lambda port, expected=None: (link, frames[0])
+        acq = Acquisition(self.db)
+        acq.attach_session(self.session)
+        try:
+            acq.start("SIMULATED")
+            deadline = time.monotonic() + 5
+            while self.db.count(self.session) < 1 and time.monotonic() < deadline:
+                time.sleep(0.05)
+        finally:
+            acq.close()
+            acquisition_module.identify = original
+        events = []
+        while not acq.events.empty():
+            events.append(acq.events.get_nowait()[0])
+        self.assertEqual(self.db.count(self.session), 1)
+        self.assertIn("protocol_error", events)
+        self.assertNotIn("disconnected", events)
 
 
 if __name__ == "__main__":

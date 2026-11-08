@@ -61,7 +61,7 @@ Exports from stopped sessions provide stable inputs. Active exports use bounded 
 
 ## Legacy migration
 
-Legacy CSV and Bosch `.bmerawdata` originals are copied with their SHA-256 under `legacy_sources`; original archives are read only. Reimport of the same hash returns the prior imported session. Missing wall, calibration, environmental or clock fields remain absent/null. Legacy rows are marked `LEGACY_INCOMPLETE` until explicitly included for analysis. Original timestamps remain verbatim in the raw record; receive time is import time, not a fabricated historical measurement date. Inspect source units/profile before comparison. Invalid/incomplete source files can leave an interrupted partial import, whose original source is still available for audit.
+Legacy CSV and Bosch `.bmerawdata` originals are copied with their SHA-256 under `legacy_sources`; original archives are read only. Reimport of the same hash returns the prior imported session. Missing wall, calibration, environmental or clock fields remain absent/null. Legacy rows are marked `LEGACY_INCOMPLETE` until explicitly included for analysis. Original timestamps remain verbatim in the raw record; `received_at` is import time, not a fabricated historical measurement date. `received_epoch` orders rows on one time basis per file, recorded in a `LEGACY_TIME_BASIS` event: device UTC when every row has a set clock, otherwise uptime offsets from import time (continuing across uptime restarts), otherwise one second per row. This keeps plots and time ranges in their original shape. Inspect source units/profile before comparison. An import that fails part-way is removed so it can be retried; its original source copy is kept for audit.
 
 ## Performance boundaries
 

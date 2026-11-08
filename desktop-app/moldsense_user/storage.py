@@ -16,10 +16,12 @@ class Store:
 
     def archive(self, remote_name, payload, port=""):
         digest = hashlib.sha256(payload).hexdigest(); stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
+        known=self.db.execute("SELECT local_path FROM imports WHERE sha256=?",(digest,)).fetchone()
+        if known and Path(known[0]).is_file(): return Path(known[0]), digest
         folder = self.archives / stamp; folder.mkdir(exist_ok=True); path = folder / Path(remote_name).name
         if path.exists(): path = folder / f"{path.stem}_{digest[:8]}{path.suffix}"
         path.write_bytes(payload)
-        self.db.execute("INSERT OR IGNORE INTO imports(imported_at,port,remote_name,local_path,bytes,sha256) VALUES(?,?,?,?,?,?)", (datetime.now(timezone.utc).isoformat(),port,remote_name,str(path),len(payload),digest)); self.db.commit()
+        self.db.execute("INSERT INTO imports(imported_at,port,remote_name,local_path,bytes,sha256) VALUES(?,?,?,?,?,?) ON CONFLICT(sha256) DO UPDATE SET local_path=excluded.local_path", (datetime.now(timezone.utc).isoformat(),port,remote_name,str(path),len(payload),digest)); self.db.commit()
         path.with_suffix(path.suffix+".manifest.json").write_text(json.dumps({"remote_name":remote_name,"saved_path":str(path),"bytes":len(payload),"sha256":digest,"port":port},indent=2),encoding="utf-8")
         return path, digest
 
