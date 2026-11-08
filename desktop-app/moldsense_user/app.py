@@ -9,6 +9,7 @@ import tkinter as tk
 from pathlib import Path
 from tkinter import filedialog, messagebox, ttk
 
+from .csv_safety import safe_row
 from .analysis import METRICS, analyze, build_baseline, overall_risk
 from .chart import CORAL, TEAL, TrendChart
 from .datasets import build_catalog
@@ -287,7 +288,7 @@ class MoldSenseApp(tk.Tk):
             for key in row:
                 if key not in keys and not key.startswith("_"):keys.append(key)
         with open(path,"w",encoding="utf-8",newline="") as handle:
-            writer=csv.DictWriter(handle,fieldnames=keys,extrasaction="ignore"); writer.writeheader(); writer.writerows(item.rows)
+            writer=csv.DictWriter(handle,fieldnames=keys,extrasaction="ignore"); writer.writeheader(); writer.writerows(safe_row(row) for row in item.rows)
         messagebox.showinfo("Export complete",f"Saved {item.readings:,} readings to:\n{path}")
 
     def import_files(self):

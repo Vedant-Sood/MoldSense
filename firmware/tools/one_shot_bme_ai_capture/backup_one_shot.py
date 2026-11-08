@@ -16,6 +16,14 @@ BEGIN_FILE = b"-----FILE_BEGIN-----\r\n"
 END_FILE = b"\r\n-----FILE_END-----"
 
 
+def safe_local_name(name):
+    """Reject device-reported names that could escape the backup folder."""
+    if (not name or name in (".", "..") or "/" in name or "\\" in name
+            or ":" in name or any(ord(c) < 32 for c in name)):
+        raise ValueError(f"Refusing unsafe device file name: {name!r}")
+    return name
+
+
 def read_until(connection: serial.Serial, marker: bytes, timeout: float = 8.0) -> bytes:
     deadline = time.monotonic() + timeout
     data = bytearray()
@@ -38,7 +46,7 @@ def inventory(connection: serial.Serial) -> list[tuple[str, int]]:
         if not line:
             continue
         name, size = line.rsplit(",", 1)
-        files.append((name.lstrip("/"), int(size)))
+        files.append((safe_local_name(name.lstrip("/")), int(size)))
     return files
 
 

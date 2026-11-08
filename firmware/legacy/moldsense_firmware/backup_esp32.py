@@ -14,6 +14,14 @@ import serial
 BAUD = 115200
 
 
+def safe_local_name(name):
+    """Reject device-reported names that could escape the backup folder."""
+    if (not name or name in (".", "..") or "/" in name or "\\" in name
+            or ":" in name or any(ord(c) < 32 for c in name)):
+        raise ValueError(f"Refusing unsafe device file name: {name!r}")
+    return name
+
+
 def send_line(connection, line):
     connection.write((line + "\n").encode("ascii"))
     connection.flush()
@@ -45,7 +53,7 @@ def list_files(connection):
             inside = False
         elif inside and "," in line:
             name, size = line.rsplit(",", 1)
-            files.append((name.lstrip("/"), int(size)))
+            files.append((safe_local_name(name.lstrip("/")), int(size)))
     if not files:
         raise RuntimeError("ESP32 returned no files")
     return files

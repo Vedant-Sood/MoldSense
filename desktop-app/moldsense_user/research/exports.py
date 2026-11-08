@@ -3,6 +3,7 @@
 import csv, hashlib, html, json
 from pathlib import Path
 from .database import FIELDS, utc
+from ..csv_safety import safe_row
 from .statistics import analyze_database, DEFAULT_SETTINGS
 from .plots import time_figure
 
@@ -97,7 +98,7 @@ def export_data(db, sessions, path, kind="raw", start=None, end=None, variables=
                         "analysis_config_id": meta["analysis_config_id"],
                     }
                 )
-                writer.writerow(row)
+                writer.writerow(safe_row(row))
     digest = hashlib.sha256()
     with path.open("rb") as source:
         for block in iter(lambda: source.read(1024 * 1024), b""):
