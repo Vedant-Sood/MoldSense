@@ -1,6 +1,6 @@
 # Validated on Windows 11, Python 3.13.9; runtime pins.
 pyserial==3.5
-numpy==2.5.3
+numpy==2.5.4
 scipy==1.18.1
 matplotlib==3.11.2
 contourpy==1.4.0
