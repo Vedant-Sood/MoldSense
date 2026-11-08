@@ -10,5 +10,5 @@ kiwisolver==1.5.1
 packaging==26.3
 pillow==12.3.0  # Historical record only: has known CVEs, fixed in 13.0.0 (see requirements.txt).
 pyparsing==3.3.2
-python-dateutil==2.9.0.post0
+python-dateutil==4.0.0
 six==1.17.0
